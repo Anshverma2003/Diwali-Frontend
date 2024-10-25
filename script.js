@@ -13,24 +13,24 @@ let minZoom = 1;
 
 
 const audio = [
-      '../Sounds/sounds_explosion0.mp3',
-      '../Sounds/sounds_explosion1.mp3',
-      '../Sounds/sounds_explosion2.mp3'
+      './Sounds/sounds_explosion0.mp3',
+      './Sounds/sounds_explosion1.mp3',
+      './Sounds/sounds_explosion2.mp3'
 ]
 
 const images = [
-    '../Assets/diya_loop_1.svg',
-    '../Assets/diya_loop_1.svg',
-    '../Assets/diya_loop_2.svg', 
-    '../Assets/diya_loop_3.svg',
-    '../Assets/diya_loop_4.svg',
-    '../Assets/diya_loop_5.svg',
-    '../Assets/diya_loop_6.svg',
-    '../Assets/diya_loop_7.svg',
-    '../Assets/diya_loop_8.svg',
-    '../Assets/diya_loop_9.svg',
-    '../Assets/diya_loop_10.svg',
-    '../Assets/diya_loop_11.svg'
+    './Assets/diya_loop_1.svg',
+    './Assets/diya_loop_1.svg',
+    './Assets/diya_loop_2.svg', 
+    './Assets/diya_loop_3.svg',
+    './Assets/diya_loop_4.svg',
+    './Assets/diya_loop_5.svg',
+    './Assets/diya_loop_6.svg',
+    './Assets/diya_loop_7.svg',
+    './Assets/diya_loop_8.svg',
+    './Assets/diya_loop_9.svg',
+    './Assets/diya_loop_10.svg',
+    './Assets/diya_loop_11.svg'
 ];
 
 let j = 0;
