@@ -1,7 +1,7 @@
 const scene = document.querySelector('.scene');
 const diyas = document.querySelectorAll('.house');
 const fireworks = document.querySelector('.main');
-const zoomOverlay = document.querySelector('.zoom-overlay');
+const zoomOverlay = document.querySelector('.zoom-wrapper');
 const dynamicImages = document.querySelectorAll('.dynamicImages');
 const middle = document.getElementById('middleDiya');
 const city = document.querySelector('.city');
@@ -9,6 +9,7 @@ const city = document.querySelector('.city');
 let zoomLevel = 1;
 let maxZoom = 3;
 let minZoom = 1;
+
 
 const images = [
     '../Assets/diya_loop_1.svg',
@@ -61,7 +62,8 @@ dynamicImages.forEach((dynamicImage) => {
         // Check if all dynamic images have been updated
         if (updatedImagesCount === dynamicImages.length) {
             setTimeout(() => {
-                city.style.display = 'none'; // Hide the scene after 2 seconds
+                city.style.display = 'none'; 
+                zoomOverlay.style.display = 'block';
             }, 2000);
         }
     });

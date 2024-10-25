@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 .scene {
@@ -24,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 
@@ -347,3 +349,6 @@ h2 span {
   }
 }
 
+.zoom-wrapper{
+    display: none;
+}
