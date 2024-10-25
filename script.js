@@ -251,3 +251,43 @@ function Run() {
 }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+middle.addEventListener('touchstart', startDrag, false);
+middle.addEventListener('touchmove', onDrag, false);
+middle.addEventListener('touchend', endDrag, false);
+
+let offsetX, offsetY;
+
+function startDrag(event) {
+    const touch = event.touches[0];
+    offsetX = touch.clientX - middle.getBoundingClientRect().left;
+    offsetY = touch.clientY - middle.getBoundingClientRect().top;
+}
+
+function onDrag(event) {
+    event.preventDefault(); // Prevent scrolling on drag
+    const touch = event.touches[0];
+    middle.style.position = 'absolute';
+    middle.style.left = `${touch.clientX - offsetX}px`;
+    middle.style.top = `${touch.clientY - offsetY}px`;
+}
+
+function endDrag() {
+    // Optional: Add any end-drag behavior if necessary
+}
