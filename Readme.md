@@ -7,7 +7,7 @@ For a step-by-step guide on how to use the website, check out our WalkThrough gi
 ![walkthrough video](./Assets/WalkThrough.gif)
 
 ## 🎉 How to Use
-1. **Visit the Website**: Open the website to enter the Diwali-themed setup.
+1. **Visit the Website**: Open the website to enter the Diwali-themed setup on your laptop and Keep the volume up..
 2. **Light Up the Diyas**: Drag and drop the diya positioned in the middle of the screen to light up all the remaining unlightened diyas.
 3. **Enjoy the Show**: Once all diyas are lit, sit back and watch the celebration unfold!
 

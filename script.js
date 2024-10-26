@@ -85,24 +85,44 @@ middle.addEventListener('dragstart', (event) => {
     event.dataTransfer.setData('text/plain', ''); 
 });
 
-const backgroundMusic = new Audio('./Sounds/Soothing.mp3');
+// const backgroundMusic = new Audio('./Sounds/Soothing.mp3'); // Path to your audio file
+// backgroundMusic.loop = true; // Loop the music
+// backgroundMusic.volume = 0.5; // Set the volume
 
-backgroundMusic.loop = true;
+// let musicPlayed = false; // Track if the music has been played
 
-backgroundMusic.volume = 0.5;
+// window.addEventListener('mouseover', () => {
+//     if (!musicPlayed) {
+//         backgroundMusic.play().catch(error => {
+//             console.log("Auto-play failed, user interaction required.");
+//         });
+//         musicPlayed = true; // Prevent music from playing multiple times
+//     }
+// });
 
-window.addEventListener('load', () => {
-    backgroundMusic.play().catch(error => {
-        console.log("Auto-play failed, user interaction required.");
-    });
-});
+// window.addEventListener('click', playBackgroundMusic, { once: true });
 
-window.addEventListener('click', playBackgroundMusic, { once: true });
+const backgroundMusic = new Audio('./Sounds/Soothing.mp3'); // Path to your audio file
+backgroundMusic.loop = true; // Loop the music
+backgroundMusic.volume = 0.5; // Set the volume
+// console.log(backgroundMusic);
+// backgroundMusic.play();
+// // Function to play background music
+// function playMusic() {
+//     backgroundMusic.play().catch(error => {
+//         console.log("Auto-play failed, user interaction required.");
+//     });
+// }
+setInterval(backgroundMusic.play() , 100);
+
+// Attempt to play music immediately on load
+// window.addEventListener('onMouseHover', playMusic);
 
 function playSound() {
   const randomIndex = Math.floor(Math.random() * audio.length + 1);
   var play = new Audio(audio[randomIndex]);
   play.play();
+  // backgroundMusic.play();
 }
 
 
