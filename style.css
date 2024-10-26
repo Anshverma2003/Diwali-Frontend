@@ -400,9 +400,6 @@ h2 span {
 
 
 
-
-
-
   @media (max-width: 768px) {
     .dynamicImages {
         width: 80px !important; /* Smaller size for images on mobile */
