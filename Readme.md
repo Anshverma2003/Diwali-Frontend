@@ -3,7 +3,7 @@
 Celebrate Diwali with our interactive website that allows you to light up virtual diyas and enjoy a vibrant display! This website was created as part of a festive competition, and you’re invited to experience the virtual Diwali celebration.
 
 ## 🎬 Walkthrough
-For a step-by-step guide on how to use the website, check out our [walkthrough video](Assets/WalkThrough.mp4) in the `Assets` folder.
+For a step-by-step guide on how to use the website, check out our [walkthrough video](Assets/WalkThrough.gif) in the `Assets` folder.
 
 ## 🎉 How to Use
 1. **Visit the Website**: Open the website to enter the Diwali-themed setup.
