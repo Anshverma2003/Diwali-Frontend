@@ -14,7 +14,8 @@ let minZoom = 1;
 
 const audio = [
       './Sounds/sounds_explosion0.mp3',
-      './Sounds/Soothing.mp3',
+      './Sounds/sounds_explosion1.mp3',
+      './Sounds/sounds_explosion2.mp3',
 ]
 
 const images = [
@@ -84,11 +85,21 @@ middle.addEventListener('dragstart', (event) => {
     event.dataTransfer.setData('text/plain', ''); 
 });
 
+const backgroundMusic = new Audio('./Sounds/Soothing.mp3');
 
+backgroundMusic.loop = true;
 
+backgroundMusic.volume = 0.5;
 
-function playSound()
-{
+window.addEventListener('load', () => {
+    backgroundMusic.play().catch(error => {
+        console.log("Auto-play failed, user interaction required.");
+    });
+});
+
+window.addEventListener('click', playBackgroundMusic, { once: true });
+
+function playSound() {
   const randomIndex = Math.floor(Math.random() * audio.length + 1);
   var play = new Audio(audio[randomIndex]);
   play.play();
