@@ -102,9 +102,9 @@ middle.addEventListener('dragstart', (event) => {
 
 // window.addEventListener('click', playBackgroundMusic, { once: true });
 
-const backgroundMusic = new Audio('./Sounds/Soothing.mp3'); // Path to your audio file
-backgroundMusic.loop = true; // Loop the music
-backgroundMusic.volume = 0.5; // Set the volume
+// const backgroundMusic = "./Sounds/Soothing.mp3"; // Path to your audio file
+// backgroundMusic.loop = true; // Loop the music
+// backgroundMusic.volume = 0.5; // Set the volume
 // console.log(backgroundMusic);
 // backgroundMusic.play();
 // // Function to play background music
@@ -117,6 +117,21 @@ backgroundMusic.volume = 0.5; // Set the volume
 
 // Attempt to play music immediately on load
 // window.addEventListener('onMouseHover', playMusic);
+
+const backgroundMusic = new Audio('./Sounds/Soothing.mp3');
+backgroundMusic.loop = true; 
+backgroundMusic.volume = 0.5;
+
+const diyaImage = document.getElementById('middleDiya');
+
+const playMusic = () => {
+    backgroundMusic.play().catch(error => {
+        console.log("Auto-play failed, user interaction required.");
+    });
+};
+
+diyaImage.addEventListener('touchstart', playMusic, { once: true });
+diyaImage.addEventListener('click', playMusic, { once: true });
 
 function playSound() {
   const randomIndex = Math.floor(Math.random() * audio.length + 1);
