@@ -113,7 +113,7 @@ backgroundMusic.volume = 0.5; // Set the volume
 //         console.log("Auto-play failed, user interaction required.");
 //     });
 // }
-setInterval(backgroundMusic.play() , 100);
+// setInterval(backgroundMusic.play() , 100);
 
 // Attempt to play music immediately on load
 // window.addEventListener('onMouseHover', playMusic);
@@ -122,7 +122,7 @@ function playSound() {
   const randomIndex = Math.floor(Math.random() * audio.length + 1);
   var play = new Audio(audio[randomIndex]);
   play.play();
-  // backgroundMusic.play();
+  backgroundMusic.play();
 }
 
 
