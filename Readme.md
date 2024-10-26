@@ -1,6 +1,6 @@
 # Diwali Themed Website 🎆
 
-Celebrate Diwali with our interactive website that allows you to light up virtual diyas and enjoy a vibrant display! This website was created as part of a festive competition, and you’re invited to experience the virtual Diwali celebration.
+Celebrate Diwali with our interactive website that allows you to light up virtual diyas and enjoy a vibrant display! This website was created as part of Crack the Code challenge at optimus information.
 
 ## 🎬 Walkthrough
 For a step-by-step guide on how to use the website, check out our WalkThrough gif.
