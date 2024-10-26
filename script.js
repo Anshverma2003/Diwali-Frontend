@@ -14,8 +14,7 @@ let minZoom = 1;
 
 const audio = [
       './Sounds/sounds_explosion0.mp3',
-      './Sounds/sounds_explosion1.mp3',
-      './Sounds/sounds_explosion2.mp3'
+      './Sounds/Soothing.mp3',
 ]
 
 const images = [
