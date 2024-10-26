@@ -97,12 +97,26 @@ canvas {
     transform: translate(50%, 50%);
 }
 
-.dynamicImages {
+.dynamicImages, .caption {
     position: relative;
     transform: scale(1);
     filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
     transition: all 0.8s ease-in-out;
     animation: float 5s ease-in-out infinite;
+}
+.center-diya-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.caption {
+  /*margin-top: px; /* Adjust spacing between diya and text */
+  font-size: 1.2em;
+  color: #FFD700; /* Festive gold color */
+  text-align: center;
+  margin-left: 30px;
 }
 
 .dynamicImages:hover {
