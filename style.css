@@ -421,3 +421,25 @@ h2 span {
 .dynamicImages {
   transition: transform 0.2s ease; /* Adds smooth dragging transition */
 }
+
+
+/* Fade-out effect for the city scene */
+.fade-out {
+  animation: fadeOut 2s forwards; /* 2s fade-out animation */
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Fade-in effect for the canvas and overlay */
+.fade-in {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 2s forwards 2s; /* 2s delay, then 2s fade-in animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

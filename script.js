@@ -67,15 +67,35 @@ dynamicImages.forEach((dynamicImage) => {
         setInterval(burn, 150);
 
         // Check if all dynamic images have been updated
+        // Check if all dynamic images have been updated
         if (updatedImagesCount === dynamicImages.length) {
-            setTimeout(() => {
-                city.style.display = 'none'; 
-                zoomOverlay.style.display = 'block';
-                CanvasId.style.display='block';
-                rocket();
-                setInterval(playSound , 100);
-            }, 2000);
+          setTimeout(() => {
+              city.style.display = 'none'; 
+              zoomOverlay.style.display = 'block';
+              CanvasId.style.display='block';
+              rocket();
+              setInterval(playSound , 100);
+          }, 2000);
         }
+        // Check if all dynamic images have been updated
+        if (updatedImagesCount === dynamicImages.length) {
+          // Add fade-out to the city scene
+          city.classList.add('fade-out');
+
+          setTimeout(() => {
+              city.style.display = 'none'; 
+
+              // Add fade-in to the canvas and zoom overlay
+              zoomOverlay.style.display = 'block';
+              CanvasId.style.display = 'block';
+              zoomOverlay.classList.add('fade-in');
+              CanvasId.classList.add('fade-in');
+
+              rocket();
+              setInterval(playSound, 100);
+          }, 2000); // 2s delay to match the fade-out time
+        }
+
     });
 });
 
