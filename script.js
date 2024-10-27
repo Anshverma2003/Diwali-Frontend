@@ -87,7 +87,7 @@ dynamicImages.forEach((dynamicImage) => {
 
               // Add fade-in to the canvas and zoom overlay
               zoomOverlay.classList.add('fade-in');
-              CanvasId.classList.add('fade-in');
+              CanvasId.classList.add('fade-out');
               zoomOverlay.style.display = 'block';
               CanvasId.style.display = 'block';
 
