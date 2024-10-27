@@ -141,6 +141,7 @@ function playSound() {
 }
 
 
+
 // Disable default scrolling and use the mouse wheel to control zoom
 // window.addEventListener('wheel', (event) => {
 //   event.preventDefault(); // Prevent default scroll behavior
