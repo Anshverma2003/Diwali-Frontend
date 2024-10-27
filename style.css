@@ -398,8 +398,6 @@ h2 span {
 
 
 
-
-
   @media (max-width: 768px) {
     .dynamicImages {
         width: 80px !important; /* Smaller size for images on mobile */
@@ -422,7 +420,7 @@ h2 span {
 
 /* Fade-out effect for the city scene */
 .fade-out {
-  animation: fadeOut 2s forwards; /* 2s fade-out animation */
+  animation: fadeOut .0.5s forwards; /* 2s fade-out animation */
 }
 
 @keyframes fadeOut {
@@ -433,7 +431,7 @@ h2 span {
 /* Fade-in effect for the canvas and overlay */
 .fade-in {
   opacity: 0; /* Start invisible */
-  animation: fadeIn 2s forwards 2s; /* 2s delay, then 2s fade-in animation */
+  animation: fadeIn 0.5s forwards 0.5s; /* 2s delay, then 2s fade-in animation */
 }
 
 @keyframes fadeIn {

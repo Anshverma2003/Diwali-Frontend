@@ -86,10 +86,10 @@ dynamicImages.forEach((dynamicImage) => {
               city.style.display = 'none'; 
 
               // Add fade-in to the canvas and zoom overlay
-              zoomOverlay.style.display = 'block';
-              CanvasId.style.display = 'block';
               zoomOverlay.classList.add('fade-in');
               CanvasId.classList.add('fade-in');
+              zoomOverlay.style.display = 'block';
+              CanvasId.style.display = 'block';
 
               rocket();
               setInterval(playSound, 100);
