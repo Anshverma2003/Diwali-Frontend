@@ -351,7 +351,7 @@ function createSpark(container) {
 
     // Random angle and velocity
     const angle = (Math.random() * 60 - 30) * (Math.PI / 180);
-    const velocity = 5 + Math.random() * 3;
+    const velocity = 5 + Math.random() * 5;
 
     // Random color
     const colors = ['#ffff00', '#ffd700', '#ff8c00', '#ff4500'];
