@@ -339,69 +339,142 @@ function endDrag() {
 
 
 const sparkDensity = 40; // Fixed density for continuous animation
+const containers = document.querySelectorAll('.fire-container.spark');
 
-function createSpark() {
+function createSpark(container) {
     const spark = document.createElement('div');
     spark.className = 'spark';
-    
+
     // Random initial position slightly above the flowerpot
-    const startX = 200;
-    const startY = 300;
-    
+    const startX = 47;
+    const startY = 0;
+
     // Random angle and velocity
     const angle = (Math.random() * 60 - 30) * (Math.PI / 180);
     const velocity = 5 + Math.random() * 3;
-    
+
     // Random color
     const colors = ['#ffff00', '#ffd700', '#ff8c00', '#ff4500'];
     spark.style.background = colors[Math.floor(Math.random() * colors.length)];
-    
+
     // Initial position
     spark.style.left = startX + 'px';
     spark.style.bottom = startY + 'px';
-    
+
     // Animation properties
     let time = 0;
     const lifetime = 1 + Math.random();
-    const size = 1 + Math.random() * 2;
+    const size = 1 + Math.random() * 6;
     spark.style.width = size + 'px';
     spark.style.height = size + 'px';
-    
+
     function updatePosition() {
         if (time >= lifetime) {
             spark.remove();
             return;
         }
-        
+
         // Calculate position using physics equations
         const x = startX + (velocity * Math.sin(angle) * time * 20);
-        const y = startY + (velocity * Math.cos(angle) * time * 20) - 
-                 (9.8 * time * time * 10); // Gravity effect
-        
+        const y = startY + (velocity * Math.cos(angle) * time * 70) -
+            (15 * time * time * 10); // Gravity effect
+
         // Update spark position
         spark.style.left = x + 'px';
         spark.style.bottom = y + 'px';
-        
+
         // Fade out near end of lifetime
         const opacity = Math.max(0, 1 - (time / lifetime));
         spark.style.opacity = opacity;
-        
+
         time += 0.016; // Approximately 60fps
         requestAnimationFrame(updatePosition);
     }
-    
+
     container.appendChild(spark);
     updatePosition();
 }
 
 function animate() {
-    // Create multiple sparks per frame
-    for (let i = 0; i < sparkDensity/10; i++) {
-        createSpark();
-    }
-    
+    containers.forEach(container => {
+        for (let i = 0; i < sparkDensity / 10; i++) {
+            createSpark(container);
+        }
+    });
+
     requestAnimationFrame(animate);
 }
 
+animate();
+
+
 // Start animation immediately
 animate();
+
+// const sparkDensity = 40; // Fixed density for continuous animation
+
+// function createSpark() {
+//     const spark = document.createElement('div');
+//     spark.className = 'spark';
+    
+//     // Random initial position slightly above the flowerpot
+//     const startX = 200;
+//     const startY = 300;
+    
+//     // Random angle and velocity
+//     const angle = (Math.random() * 60 - 30) * (Math.PI / 180);
+//     const velocity = 5 + Math.random() * 3;
+    
+//     // Random color
+//     const colors = ['#ffff00', '#ffd700', '#ff8c00', '#ff4500'];
+//     spark.style.background = colors[Math.floor(Math.random() * colors.length)];
+    
+//     // Initial position
+//     spark.style.left = startX + 'px';
+//     spark.style.bottom = startY + 'px';
+    
+//     // Animation properties
+//     let time = 0;
+//     const lifetime = 1 + Math.random();
+//     const size = 1 + Math.random() * 2;
+//     spark.style.width = size + 'px';
+//     spark.style.height = size + 'px';
+    
+//     function updatePosition() {
+//         if (time >= lifetime) {
+//             spark.remove();
+//             return;
+//         }
+        
+//         // Calculate position using physics equations
+//         const x = startX + (velocity * Math.sin(angle) * time * 20);
+//         const y = startY + (velocity * Math.cos(angle) * time * 20) - 
+//                     (9.8 * time * time * 10); // Gravity effect
+        
+//         // Update spark position
+//         spark.style.left = x + 'px';
+//         spark.style.bottom = y + 'px';
+        
+//         // Fade out near end of lifetime
+//         const opacity = Math.max(0, 1 - (time / lifetime));
+//         spark.style.opacity = opacity;
+        
+//         time += 0.016; // Approximately 60fps
+//         requestAnimationFrame(updatePosition);
+//     }
+    
+//     container.appendChild(spark);
+//     updatePosition();
+// }
+
+// function animate() {
+//     // Create multiple sparks per frame
+//     for (let i = 0; i < sparkDensity/10; i++) {
+//         createSpark();
+//     }
+    
+//     requestAnimationFrame(animate);
+// }
+
+// // Start animation immediately
+// animate();
