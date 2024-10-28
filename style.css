@@ -397,7 +397,7 @@ h2 span {
 
 .optimus img{
   width: 100px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -446,7 +446,7 @@ h2 span {
 .Message {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ff6600;
+    color: #f2ff00;
     text-shadow: 2px 2px 8px rgba(255, 102, 0, 0.6);
     margin: 10px 0; /* Decrease the top/bottom margin */
     animation: fadeIn 2s ease-in-out;
@@ -458,3 +458,520 @@ h2 span {
 
 /* FIRE POT CSS  */
 
+.firework-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-top: 50px;
+  /* z-index: 10; */
+}
+
+.spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #212121;
+  transform-origin: center bottom;
+  z-index: 10;
+}
+
+@keyframes glow {
+  from { opacity: 0.4; }
+  to { opacity: 0.6; }
+}
+
+/* .firework-container */
+
+.flowerPot{
+  position: relative;
+  bottom: -3rem;
+}@import url(https://fonts.googleapis.com/css?family=Bad+Script|Lato:400,700);
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+canvas {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    background: #212121;
+    position: relative;
+    overflow: hidden;
+}
+
+.city {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.house {
+    position: absolute;
+}
+
+.row:nth-child(1) .house:nth-child(1) {
+    top: 15%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.row:nth-child(1) .house:nth-child(2) {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row:nth-child(1) .house:nth-child(3) {
+    top: 15%;
+    right: 25%;
+    transform: translate(50%, -50%);
+}
+
+.row:nth-child(2) .house:nth-child(1) {
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.row:nth-child(2) .house:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row:nth-child(2) .house:nth-child(3) {
+    top: 50%;
+    right: 10%;
+    transform: translate(50%, -50%);
+}
+
+.row:nth-child(3) .house:nth-child(1) {
+    bottom: 15%;
+    left: 25%;
+    transform: translate(-50%, 50%);
+}
+
+.row:nth-child(3) .house:nth-child(2) {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.row:nth-child(3) .house:nth-child(3) {
+    bottom: 15%;
+    right: 25%;
+    transform: translate(50%, 50%);
+}
+
+.dynamicImages, .caption {
+    position: relative;
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
+    transition: all 0.8s ease-in-out;
+    animation: float 5s ease-in-out infinite;
+}
+.center-diya-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.caption {
+  /*margin-top: px; /* Adjust spacing between diya and text */
+  font-size: 1.2em;
+  color: #FFD700; /* Festive gold color */
+  text-align: center;
+  margin-left: 30px;
+}
+
+.dynamicImages:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .dynamicImages {
+        width: 100px !important;
+        height: auto;
+    }
+
+
+    .row:nth-child(2) .house:nth-child(1) {
+        left: 5%;
+    }
+
+    .row:nth-child(2) .house:nth-child(3) {
+        right: 5%;
+    }
+
+    .row:nth-child(1) .house:nth-child(1),
+    .row:nth-child(3) .house:nth-child(1) {
+        left: 25%;
+    }
+
+    .row:nth-child(1) .house:nth-child(3),
+    .row:nth-child(3) .house:nth-child(3) {
+        right: 25%;
+    }
+}
+
+@media (max-width: 200px) {
+    .dynamicImages {
+        width: 60px !important;
+    }
+
+
+    .row:nth-child(2) .house:nth-child(1) {
+        left: 2%;
+    }
+
+    .row:nth-child(2) .house:nth-child(3) {
+        right: 2%;
+    }
+
+    .row:nth-child(1) .house:nth-child(1),
+    .row:nth-child(3) .house:nth-child(1) {
+        left: 20%;
+    }
+
+    .row:nth-child(1) .house:nth-child(3),
+    .row:nth-child(3) .house:nth-child(3) {
+        right: 20%;
+    }
+}
+
+.zoom-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.3);
+}
+
+.main {
+    display: none; 
+  }
+  
+  .zoomed-in {
+    display: block;
+    text-align: center;
+    background-color: red;
+  }
+  
+  .zoomed-in h2 {
+    color: transparent;
+    font-size: 15vw;
+  }
+  
+  .zoomed-in h2 span {
+    animation: animate 3s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+  .zoomed-in footer {
+    margin-top: 4vh;
+    color: white;
+    text-align: right;
+    font-size: 3vw;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .zoomed-in body {
+      align-items: center;
+    }
+  }
+ 
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bad Script", cursive;
+}
+
+body {
+  font-family: "Sacramento", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #212121;
+  color: #ffffff;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+h2 {
+  display: flex;
+  font-size: 15vw;
+}
+
+h2 span {
+  color: transparent;
+  animation: animate 3s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 8vh;
+  padding: 20px;
+}
+
+.fireworks {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.fireworks li {
+  height: 50px;
+  width: 50px;
+  border-radius: 500px;
+  position: relative;
+  background-color: #8D6E63;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fireworks li::before,
+.fireworks li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  border-radius: 500px;
+  top: -40%;
+}
+
+.fireworks li::before {
+  left: -30%;
+}
+
+.fireworks li::after {
+  right: -30%;
+}
+
+.fireworks li span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotate(45deg);
+  animation: fire 0.3s ease infinite;
+}
+
+.fireworks li:nth-child(1) span { animation-delay: 0.5s; }
+.fireworks li:nth-child(2) span { animation-delay: 1s; }
+.fireworks li:nth-child(3) span { animation-delay: 1.5s; }
+.fireworks li:nth-child(4) span { animation-delay: 2s; }
+.fireworks li:nth-child(5) span { animation-delay: 2.5s; }
+.fireworks li:nth-child(6) span { animation-delay: 3s; }
+
+@keyframes animate {
+  0% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(0deg);
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff;
+  }
+  30%, 70% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff;
+  }
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(2px) hue-rotate(0deg);
+  }
+}
+
+@keyframes fire {
+  0%, 100% {
+    transform: rotate(55deg);
+    width: 20px;
+    background: linear-gradient(90deg, orange, orangered);
+  }
+  50% {
+    transform: rotate(35deg);
+    width: 18px;
+    background: linear-gradient(90deg, orangered, orange);
+  }
+}
+
+.zoom-wrapper{
+
+    display: none;
+    
+}
+
+.optimus {
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    gap: 23rem;
+    align-items: center;
+    
+  }
+
+  .optimus h3 {
+    color: red;
+    text-align: center; 
+    font-size: 5vw;
+  }
+
+
+.optimus img{
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+
+
+  @media (max-width: 768px) {
+    .dynamicImages {
+        width: 80px !important; /* Smaller size for images on mobile */
+    }
+
+    h2 {
+        font-size: 10vw;
+    }
+
+    .fireworks li {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.dynamicImages {
+  transition: transform 0.2s ease; /* Adds smooth dragging transition */
+}
+
+
+/* Fade-out effect for the city scene */
+.fade-out {
+  animation: fadeOut .0.5s forwards; /* 2s fade-out animation */
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Fade-in effect for the canvas and overlay */
+.fade-in {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 0.5s forwards 0.5s; /* 2s delay, then 2s fade-in animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f2ff00;
+    text-shadow: 2px 2px 8px rgba(255, 102, 0, 0.6);
+    margin: 10px 0; /* Decrease the top/bottom margin */
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    top: 27rem;
+
+}
+
+
+/* FIRE POT CSS  */
+
+.firework-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-top: 50px;
+  /* z-index: 10; */
+}
+
+.spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #212121;
+  transform-origin: center bottom;
+  z-index: 10;
+}
+
+@keyframes glow {
+  from { opacity: 0.4; }
+  to { opacity: 0.6; }
+}
+
+/* .firework-container */
+
+.flowerPot{
+  position: relative;
+  bottom: -3rem;
+}
