@@ -443,6 +443,17 @@ h2 span {
   to { opacity: 1; }
 }
 
+.Message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 2px 2px 8px rgba(255, 102, 0, 0.6);
+    margin: 10px 0; /* Decrease the top/bottom margin */
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    top: 27rem;
+
+}
 
 
 /* FIRE POT CSS  */
