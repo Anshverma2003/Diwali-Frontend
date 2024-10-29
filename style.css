@@ -471,7 +471,7 @@ h2 span {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: #212121;
+  background: #000000;
   transform-origin: center bottom;
   z-index: 10;
 }

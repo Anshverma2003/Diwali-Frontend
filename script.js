@@ -16,8 +16,7 @@ let minZoom = 1;
 
 const audio = [
       './Sounds/sounds_explosion0.mp3',
-      './Sounds/sounds_explosion1.mp3',
-      './Sounds/sounds_explosion2.mp3',
+      './Sounds/sounds_explosion1.mp3'
 ]
 
 const images = [
@@ -71,7 +70,7 @@ dynamicImages.forEach((dynamicImage) => {
                     zoomOverlay.style.display = 'block';
                     CanvasId.style.display = 'block';
                     rocket();
-                    setInterval(playSound, 100);
+                    setInterval(playSound, 10000);
                 }, 2000);
             }
         }
